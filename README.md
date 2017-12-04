@@ -6,7 +6,6 @@ Implement a wheel sensor for existing model car
 
 ## What is a CAN bus
 Can bus is a form of communication primarily found in the automotive industry and/or industrial facilities. It allows for multiple devices to communicate on a shared medium, using an agreed upon protocol of communication.
-There exist 2 types of CANs, 2.0A and 2.0B. The A can carry 11 bits while the B can carry 29 bits. 
 
 ## How CAN bus works
 Communication is done via either a single wire or dual wire. The devices can either send a dominant 0, or a recessive 1. When a node (MCU) pulls the wire to 0 the line will transmit 0 even if other nodes pull the wire to a 1. Messages are then sent in different frames:
@@ -38,7 +37,7 @@ All nodes on the bus as stated earlier that get a correct frame will transmit a 
 Checksum that is transmitted that is checked by the receiver to notice errors in the transmitted frame.
 
 ## Why use a CAN bus
-Today cars for example, we have a computer at every subsystem. We have a computer for the transmission system, engine etc. All this sensors needs to be connected in someway to be able to read important values from these systems. To be able to organize these messages in a sophisticated way we use the CAN. CAN is a message protocol which gives us the option to prioritize messages. With this ability we can then prioritize what we think are the most important information.
+Today cars for example, we have a computer at every subsystem. We have a computer for the transmission system, engine etc. All this sensors needs to be connected in someway to be able to read important values from these systems. To be able to organize these messages in a sophisticated way we use the CAN. CAN is a message protocol which gives us the option to prioritize messages. With this ability we can then prioritize what we think are the most important information by placing the IDs.
 ## MCU
 * STM32F042K6
 * ARM Cortex M0

@@ -39,7 +39,6 @@ Checksum that is transmitted that is checked by the receiver to notice errors in
 ## Why use a CAN bus
 Today cars for example, we have a computer at every subsystem. We have a computer for the transmission system, engine etc. All this sensors needs to be connected in someway to be able to read important values from these systems. To be able to organize these messages in a sophisticated way we use the CAN. CAN is a message protocol which gives us the option to prioritize messages. With this ability we can then prioritize what we think are the most important information.
 ## MCU
-Markup:
 * STM32F042K6
 * ARM Cortex M0
 * Embedded CAN controller
@@ -55,8 +54,7 @@ We’ve been given the code base written in c++ for the AlphaCar project. There 
 ## Current wheel sensor implementation
 The wheel sensor works by having holes in the rim of the wheel that the MCU measure how many rotation has occurred in a set specific time. There is no need to see if it is reverse of forward speed since there is no reverse. This will update the MCU and the information should then be transferred over the CAN to the central processing unit in the dual core MCU board.
 
-## Things to do
-Markup: 
+## Things to do 
 * Get CAN communication working using a debugger on a host and an old board from the AlphaCar project as the wheel node.
 * Get the board to work with the wheel sensor to calculate information about the speed of the car.
 * Design an API for the CAN bus that is standalone from the processor in mind.

@@ -53,11 +53,6 @@ We’ve been given the code base written in c++ for the AlphaCar project. There 
 Current wheel sensor implementation
 The wheel sensor works by having holes in the rim of the wheel that the MCU measure how many rotation has occurred in a set specific time. There is no need to see if it is reverse of forward speed since there is no reverse. This will update the MCU and the information should then be transferred over the CAN to the central processing unit in the dual core MCU board.
 
-## The wheel braking system
-The cars are using disc brakes to break. All four wheels are breaking independently which means that it is possible to break which wheel you want. The wheel breaks by a metal wiring is pulled by a servo. By reading from the can, we now how much to break. 
-If we look at a normal car for example, 70% of the break is done by the front wheels and only 30% of the rear wheels. This can be accomplished by the CAN. But why don’t we just hardcode it to do it? Well what if we are going reverse.
-
-
 ## Things to do
 Get CAN communication working using a debugger on a host and an old board from the AlphaCar project as the wheel node.
 Get the board to work with the wheel sensor to calculate information about the speed of the car.

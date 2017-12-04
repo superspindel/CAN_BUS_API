@@ -55,11 +55,11 @@ We’ve been given the code base written in c++ for the AlphaCar project. There 
 The wheel sensor works by having holes in the rim of the wheel that the MCU measure how many rotation has occurred in a set specific time. There is no need to see if it is reverse of forward speed since there is no reverse. This will update the MCU and the information should then be transferred over the CAN to the central processing unit in the dual core MCU board.
 
 ## Things to do
-Get CAN communication working using a debugger on a host and an old board from the AlphaCar project as the wheel node.
+Markup: *Get CAN communication working using a debugger on a host and an old board from the AlphaCar project as the wheel node.
 
-Get the board to work with the wheel sensor to calculate information about the speed of the car.
+*Get the board to work with the wheel sensor to calculate information about the speed of the car.
 
-Design an API for the CAN bus that is standalone from the processor in mind.
-Implement the API from 4 with documentation, tests and proof of correctness.
+*Design an API for the CAN bus that is standalone from the processor in mind.
+*Implement the API from 4 with documentation, tests and proof of correctness.
 
 

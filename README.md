@@ -14,13 +14,13 @@ Data frame
 Remote frame
 Error frame
 Overload frame
-Where each frame starts with an identifier to the sending node. The idea is to have all of the nodes transmit at the same time, and if a node transmits 1 and sees a 0 on the line, it will go from sending to transmitting since a node with higher priority is trying to transmit at the same time.
+Where each frame starts with an identifier to the sending node. The idea is to have all of the nodes to be able to transmit at the same time, and if a node transmits 1 and sees a 0 on the line, it will go from sending to transmitting since a node with higher priority is trying to transmit at the same time.
 
-0001
+### Example
 
-0010
+Id 0001 trying to send at the same time as id 0010.
 
-Would result in node with id 0001 sending and 0010 receiving. 
+This would result in node with id 0001 sending and 0010 receiving. 
 
 Since all nodes send on the same bus, and there is no id on the receiver all nodes can hear all transmissions, and as long as the transmission has been sent completely and correctly to one other node, an acknowledgement will be retransmitted to the node. Therefore the node can not know that the frame has reached its intended destination. 
 

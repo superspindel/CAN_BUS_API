@@ -50,12 +50,15 @@ Previous work on this project that had as a focus to allow for a dual core proce
 
 ## Code base
 We’ve been given the code base written in c++ for the AlphaCar project. There is a CAN bus implementation there that we are to rewrite in rust. We’ve been in contact with Sebastian that was the last person involved in this project, hired in from Greppit as a consultant to make sure everything worked. 
-Current wheel sensor implementation
+
+## Current wheel sensor implementation
 The wheel sensor works by having holes in the rim of the wheel that the MCU measure how many rotation has occurred in a set specific time. There is no need to see if it is reverse of forward speed since there is no reverse. This will update the MCU and the information should then be transferred over the CAN to the central processing unit in the dual core MCU board.
 
 ## Things to do
 Get CAN communication working using a debugger on a host and an old board from the AlphaCar project as the wheel node.
+
 Get the board to work with the wheel sensor to calculate information about the speed of the car.
+
 Design an API for the CAN bus that is standalone from the processor in mind.
 Implement the API from 4 with documentation, tests and proof of correctness.
 

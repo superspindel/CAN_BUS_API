@@ -25,23 +25,24 @@ Since all nodes send on the same bus, and there is no id on the receiver all nod
 
 The good thing about this is that collisions can occur, but instead of resending, the most important message will be transmitted without being canceled out.
 Error noticing is handled via 5 different methods:
-Bit monitoring
+### Bit monitoring
 Read the level on the bus after transmitting:
-Bit stuffing
+### Bit stuffing
 After transmitting 5 of the same value bits, 1 bit of opposite value is stuffed in the transmission and is later removed by the receiver.
-Frame check
+### Frame check
 Check size of different frames and see that they fit the set standard.
-Acknowledgement check
+### Acknowledgement check
 All nodes on the bus as stated earlier that get a correct frame will transmit a dominant level on the acknowledgement slot in the message, if the message was received correctly.
-Cyclic redundancy check
+### Cyclic redundancy check
 Checksum that is transmitted that is checked by the receiver to notice errors in the transmitted frame.
 
 ## Why use a CAN bus
 Today cars for example, we have a computer at every subsystem. We have a computer for the transmission system, engine etc. All this sensors needs to be connected in someway to be able to read important values from these systems. To be able to organize these messages in a sophisticated way we use the CAN. CAN is a message protocol which gives us the option to prioritize messages. With this ability we can then prioritize what we think are the most important information.
-MCU
-STM32F042K6
-ARM Cortex M0
-Embedded CAN controller
+## MCU
+Markup:
+* STM32F042K6
+* ARM Cortex M0
+* Embedded CAN controller
 
 Controller area network (CAN) The CAN is compliant with specifications 2.0A and B (active) with a bitrate up to 1 Mbit/s. It can receive and transmit standard frames with 11-bit identifiers as well as extended frames with 29-bit identifiers. It has three transmit mailboxes, two receive FIFOs with 3 stages and 14 scalable filter banks.
 
